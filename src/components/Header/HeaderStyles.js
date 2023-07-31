@@ -28,11 +28,11 @@ export const NavList = styled.nav`
 
 export const NavItem = styled(NavLink)`
   display: flex;
-  color: var(--gray);
-  font-size: var(--base);
+  color: var(--color-gray-50);
+  font-size: var(--font-base);
   
   &.active {
-    color: var(--black);
+    color: var(--color-black);
   }
 `;
 
