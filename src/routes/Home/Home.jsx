@@ -8,6 +8,7 @@ const Home = () => {
     <main style={{ maxWidth: "1600px", margin: "0 auto", padding:'0 20px' }}>
       <HeroContent />
       <BestSellingProducts/>
+      <AboutUs/>
     </main>
   );
 };
