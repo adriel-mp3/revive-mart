@@ -7,10 +7,12 @@ import {
   NavContainer,
   NavItem,
   NavList,
+  MobileButton,
+  MenuButtons
 } from "./HeaderStyles";
 import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
-
+import menuOpen from '../../assets/menu-open.svg'
 const Header = () => {
   return (
     <HeaderContainer>
@@ -24,10 +26,14 @@ const Header = () => {
           <NavItem to="woman">Woman</NavItem>
           <NavItem to="men">Men&apos;s</NavItem>
         </NavList>
-        <CartButton>
-          <img src={cart} alt="Cart icon" />
-        </CartButton>
-        {/* <button>mobile</button> */}
+        <MenuButtons>
+          <CartButton>
+            <img src={cart} alt="Cart icon" />
+          </CartButton>
+          <MobileButton>
+            <img src={menuOpen} alt="Menu open icon" />
+          </MobileButton>
+        </MenuButtons>
       </NavContainer>
     </HeaderContainer>
   );

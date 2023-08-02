@@ -9,6 +9,10 @@ export const HeaderContainer = styled.header`
   max-width: 1600px;
   margin: 60px auto;
   padding: 0 20px;
+
+  @media (max-width:1024px) {
+    justify-content: space-between;
+  }
 `;
 
 export const Logo = styled.img`
@@ -19,11 +23,19 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   flex: 1;
+
+  @media (max-width:1024px) {
+    flex: initial;
+  }
 `;
 
 export const NavList = styled.nav`
   display: flex;
   gap: 48px;
+
+  @media (max-width:1024px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled(NavLink)`
@@ -37,6 +49,21 @@ export const NavItem = styled(NavLink)`
 `;
 
 export const CartButton = styled.button`
-  border: none;
-  background: none;
+
 `;
+
+export const MobileButton = styled.button`
+
+  display: none;
+  @media (max-width:1024px) {
+    display:block;
+  }
+`
+
+export const MenuButtons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+`
+
+
