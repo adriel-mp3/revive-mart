@@ -1,7 +1,8 @@
 import React from 'react'
-import SeeMore from '../Buttons/SeeMore/SeeMore/SeeMore'
-import { CardImage, CardsWrapper, ProductCard, ProductsContainer, SideInfo, SideText, SideTitle, CardTitle, CardPrice } from './BestSellingProductsStyles'
+import { CardsWrapper, ProductCard, ProductsContainer, SideInfo} from './BestSellingProductsStyles'
 import { API_URL } from '../../api/api'
+import PrimaryButton from '../Buttons/PrimaryButton'
+
 const BestSellingProducts = () => {
   const [data, setData] = React.useState(null);
 
@@ -18,16 +19,16 @@ const BestSellingProducts = () => {
   return (
     <ProductsContainer>
       <SideInfo>
-        <SideTitle>Best Selling Products</SideTitle>
-        <SideText>Our collection of Best Selling products in our pre-owned store</SideText>
-        <SeeMore />
+        <h2>Best Selling Products</h2>
+        <p>Our collection of Best Selling products in our pre-owned store</p>
+        <PrimaryButton color='black'>See more</PrimaryButton>
       </SideInfo>
       <CardsWrapper>
         {data && data.map((product) =>
           <ProductCard key={product.title}>
-            <CardImage src={product.image} alt={product.title} />
-            <CardTitle>{product.title}</CardTitle>
-            <CardPrice>$ {product.price}</CardPrice>
+            <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3>
+            <span>$ {product.price}</span>
           </ProductCard>)}
       </CardsWrapper>
     </ProductsContainer>
