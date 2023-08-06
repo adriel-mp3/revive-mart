@@ -1,20 +1,11 @@
 import React from 'react'
-import { CardsWrapper, ProductCard, ProductsContainer, SideInfo} from './BestSellingProductsStyles'
+import { CardsWrapper, ProductCard, ProductsContainer, SideInfo } from './BestSellingProductsStyles'
 import { API_URL } from '../../api/api'
 import PrimaryButton from '../Buttons/PrimaryButton'
+import useFetch from '../../hooks/useFetch'
 
 const BestSellingProducts = () => {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetchProducts()
-  }, [])
-
-  async function fetchProducts() {
-    const response = await fetch(`${API_URL}products?limit=4`);
-    const data = await response.json();
-    return setData(data)
-  }
+  const { data, loading, error } = useFetch(`${API_URL}products?limit=4`);
 
   return (
     <ProductsContainer>
@@ -25,7 +16,7 @@ const BestSellingProducts = () => {
       </SideInfo>
       <CardsWrapper>
         {data && data.map((product) =>
-          <ProductCard key={product.title}>
+          <ProductCard key={product.id}>
             <img src={product.image} alt={product.title} />
             <h3>{product.title}</h3>
             <span>$ {product.price}</span>
