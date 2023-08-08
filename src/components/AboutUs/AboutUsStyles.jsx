@@ -11,7 +11,7 @@ export const AboutContainer = styled.section`
     font-weight: 700;
     font-size: ${({theme}) => theme.fontSizes.lg};
     text-align: center;
-    color: ${({theme}) => theme.colors.gray70};
+    color: ${({theme}) => theme.colors.black};
     margin-bottom: .75rem;
     position: relative;
     display: flex;
