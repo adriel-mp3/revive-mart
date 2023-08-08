@@ -1,43 +1,61 @@
 import styled from 'styled-components';
 import arrow from '../../assets/custom-direct-arrow.svg'
+
 export const AboutContainer = styled.section`
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
   margin-bottom: 10rem;
-`
 
-export const AboutTitle = styled.h2`
-  font-weight: 700;
-  font-size: var(--lg);
-  text-align: center;
-  color: var(--color-gray-60);
-  margin-bottom: .75rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    background: url(${arrow});
-    width: 73px;
-    height: 24px;
-    top:20px;
-    padding-right: 300px;
-    background-repeat: no-repeat;
+  h2 {
+    font-weight: 700;
+    font-size: ${({theme}) => theme.fontSizes.lg};
+    text-align: center;
+    color: ${({theme}) => theme.colors.gray70};
+    margin-bottom: .75rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(${arrow});
+      width: 73px;
+      height: 24px;
+      top:20px;
+      padding-right: 300px;
+      background-repeat: no-repeat;
+   }
   }
-`
+  p {
+    text-align: center;
+    font-weight: 500;
+    font-size: ${({theme}) => theme.fontSizes.base};
+    color: ${({theme}) => theme.colors.gray50};
+    margin-bottom: 3rem;
+  }
 
-export const AboutText = styled.p`
-  text-align: center;
-  font-weight: 500;
-  font-size: var(--base);
-  color: var(--color-gray-50);
-  margin-bottom: 3rem;
+  @media (max-width:1024px) {
+    p {
+      margin-bottom: 2rem;
+    }
+    margin-bottom: 5rem;
+  }
 `
 
 export const AboutCards = styled.ul`
   display: flex;
   justify-content: space-between;
+  
   gap: 1.5rem;
+
+  @media (max-width:1024px) {
+    flex-direction: column;
+    align-items: initial;
+    gap:0px;
+  }
 `
 
 export const AboutCard = styled.li`
@@ -49,9 +67,9 @@ export const AboutCard = styled.li`
 
 export const CardTitle = styled.h3`
   text-align: center;
-  font-size: var(--base);
+  font-size: ${({theme}) => theme.fontSizes.base};
   font-weight: 700;
-  color:var(--color-black-90);
+  color:${({theme}) => theme.colors.black90};
   margin-bottom: .75rem;
 `
 
@@ -59,8 +77,8 @@ export const CardTitle = styled.h3`
 export const CardText = styled.p`
   text-align: center;
   font-weight: 500;
-  font-size: var(--base);
-  color: var(--color-gray-50);
+  font-size: ${({theme}) => theme.fontSizes.base};
+  color: ${({theme}) => theme.colors.gray50};
   max-width: 35ch;
 `
 
@@ -72,10 +90,6 @@ export const ImageWrapper = styled.div`
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background:var(--color-base);
+  background:${({theme}) => theme.colors.base};
   margin-bottom: 1.5rem;
-`
-
-export const CardImage = styled.img`
-  
 `
