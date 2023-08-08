@@ -3,41 +3,58 @@ import img from '../../assets/hero-image.jpg';
 
 export const HeroContainer = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  padding-left: 2.81rem;
   gap: 40px;
-  background-color: var(--color-base);
+  margin: 0 1.25rem 6rem 1.25rem;
+  background-color: ${({ theme }) => theme.colors.base};
   border-radius: 14px;
   overflow: hidden;
-  margin-bottom: 6rem;
+
+  @media (max-width:1024px) {
+    display: block;
+    padding: 60px 0;
+  }
 `;
 
-export const SideInfo = styled.div``;
+export const HeroBackground = styled.main`
+  margin: 0 auto;
+  max-width: 1600px;
+  @media (max-width:1024px) {
+  }
+`
 
-export const Title = styled.h1`
-  color: var(--black);
+export const SideInfo = styled.div`
+  padding-left: 2.81rem;
+  margin-left: 20px;
+h1 {
+  color: ${({ theme }) => theme.colors.black};
   font-weight: 800;
-  font-size: var(--xl);
+  font-size: ${({ theme }) => theme.fontSizes.xl};
   line-height: 4rem;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width:1024px) {
+  margin-left: 0px;
+}
 `;
 
 export const TitleLabel = styled.div`
   display: flex;
   gap: 60px;
   margin-bottom: 1.5rem;
-`;
 
-export const Label = styled.p`
-  font-size: var(--lg);
-  color: var(--gray-100);
-`;
+  p {
+    font-size: ${({ theme }) => theme.fontSizes.lg};
+    color: ${({ theme }) => theme.colors.gray100};
+  }
 
-export const LabelInfo = styled.span`
-  display: block;
-  font-size: var(--base);
-  color: var(--gray-100);
+  span {
+    display: block;
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    color:${({ theme }) => theme.colors.gray100};
+  }
 `;
 
 export const LabelContainer = styled.div`
@@ -53,7 +70,7 @@ export const LabelContainer = styled.div`
     width: 2px;
     left: -30px;
     top: 10px;
-    background: var(--gray-50);
+    background: ${({ theme }) => theme.colors.gray50};
   }
 `;
 
@@ -61,6 +78,11 @@ export const HeroImg = styled.div`
   background-image: url(${img});
   background-position: center;
   background-size: cover;
-  max-width: 800px;
+  width: 100%;
   height: 512px;
+  
+  @media (max-width:1024px) {
+    display: none;
+    background-image: none;
+  }
 `;
