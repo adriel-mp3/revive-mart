@@ -4,10 +4,11 @@ import Home from "./routes/Home/Home";
 import Jewelery from "./routes/Jewelery/Jewelery";
 import Woman from "./routes/Woman/Woman";
 import Men from "./routes/Men/Men";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import Footer from "./components/Footer/Footer";
 import styled from 'styled-components';
-import ProductInfo from "./components/ProductInfo/ProductInfo";
+import ProductInfo from "./components/ProductInfo";
+import Cart from "./routes/Cart";
 
 const MainContainer = styled.div`
   display: flex;
@@ -29,8 +30,13 @@ function App() {
             <Route path="jewelery/*" element={<Jewelery />}>
               <Route path="product-info/:id" element={<ProductInfo />} />
             </Route>
-            <Route path="woman" element={<Woman />} />
-            <Route path="men" element={<Men />} />
+            <Route path="woman/*" element={<Woman />}>
+              <Route path="product-info/:id" element={<ProductInfo />} />
+            </Route>
+            <Route path="men/*" element={<Men />}>
+              <Route path="product-info/:id" element={<ProductInfo />} />
+            </Route>
+            <Route path="cart" element={<Cart />} />
           </Routes>
         </Content>
         <Footer />
