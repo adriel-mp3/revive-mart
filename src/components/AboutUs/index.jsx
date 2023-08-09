@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutContainer, AboutCards, AboutCard, CardText, CardTitle, ImageWrapper } from './AboutUsStyles'
+import { AboutContainer, AboutCards, AboutCard, CardText, CardTitle, ImageWrapper } from './style'
 import aboutCardsData from '../../utils/aboutCardsData';
 
 const AboutUs = () => {
