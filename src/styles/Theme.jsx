@@ -15,8 +15,10 @@ export const theme = {
   },
   fontSizes: {
     base: '1.125rem',
+    medium:'1.5rem',
     lg: '2rem',
-    xl: '4rem',
+    xlg:'2.5rem',
+    xl: '4rem', 
   },
 };
 
