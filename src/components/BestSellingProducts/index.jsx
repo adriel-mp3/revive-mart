@@ -1,7 +1,7 @@
 import React from 'react'
-import { CardsWrapper, ProductCard, ProductsContainer, SideInfo } from './BestSellingProductsStyles'
+import { CardsWrapper, ProductCard, ProductsContainer, SideInfo } from './style'
 import { API_URL } from '../../api/api'
-import PrimaryButton from '../Buttons/PrimaryButton'
+import PrimaryButton from '../Button/PrimaryButton'
 import useFetch from '../../hooks/useFetch'
 
 const BestSellingProducts = () => {
