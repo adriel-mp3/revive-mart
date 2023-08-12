@@ -4,7 +4,9 @@ import { CartInfo, CartLink } from './style';
 
 const CartDropdown = ({ $isOpen }) => {
   const { cartData } = React.useContext(UserContext);
-  if (cartData)
+  if (cartData) console.log('vazio')
+
+  if (cartData.length)
     return (
       <CartInfo $isOpenCart={$isOpen}>
         <ul>
@@ -16,7 +18,12 @@ const CartDropdown = ({ $isOpen }) => {
         <CartLink to="/cart">View Cart</CartLink>
       </CartInfo>
     )
-  return null
+  return (<CartInfo $isOpenCart={$isOpen}>
+    <ul>
+      <li>Empty Cart</li>
+    </ul>
+    <CartLink to="/cart">View Cart</CartLink>
+  </CartInfo>)
 }
 
 export default CartDropdown
