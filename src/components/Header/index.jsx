@@ -5,33 +5,34 @@ import {
   HeaderContainer,
   Logo,
   NavContainer,
-  NavItem,
-  NavList,
   MobileButton,
-  MenuButtons
-} from "./HeaderStyles";
+  MenuButtons,
+} from "./style";
+
 import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
 import menuOpen from '../../assets/menu-open.svg'
+import menuClose from '../../assets/menu-close.svg'
+import useToggle from '../../hooks/useToggle';
+import CartDropdown from "./CartDropdown";
+import NavLinks from "./NavLinks";
+
 const Header = () => {
+  const [menuMobile, setMenuMobile] = useToggle();
+  const [menuCart, setMenuCart] = useToggle();
+
   return (
     <HeaderContainer>
       <Logo src={logo} alt="Revive Mart" />
       <NavContainer>
-        <NavList>
-          <NavItem to="/" end>
-            Home
-          </NavItem>
-          <NavItem to="jewelery">Jewelery</NavItem>
-          <NavItem to="woman">Woman</NavItem>
-          <NavItem to="men">Men&apos;s</NavItem>
-        </NavList>
+        <NavLinks $isOpen={menuMobile} />
         <MenuButtons>
-          <CartButton>
+          <CartButton onClick={setMenuCart}>
             <img src={cart} alt="Cart icon" />
           </CartButton>
-          <MobileButton>
-            <img src={menuOpen} alt="Menu open icon" />
+          <CartDropdown $isOpen={menuCart} />
+          <MobileButton onClick={setMenuMobile}>
+            <img src={menuMobile ? menuClose : menuOpen} alt="Menu open icon" />
           </MobileButton>
         </MenuButtons>
       </NavContainer>

@@ -17,7 +17,6 @@ export const NavList = styled.nav`
   display: flex;
   gap: 48px;
   animation: ${showLeft} .3s forwards;
-  overflow-x: hidden;
   
   @media (max-width:1024px) {
     display: ${({ $isOpenMenu }) => $isOpenMenu ? 'block' : 'none'};
@@ -26,8 +25,8 @@ export const NavList = styled.nav`
     height: 100vh;
     padding: 120px 20px 20px 20px;
     width: 200px;
-    top: 0px;
-    right: 0px;
+    top: -60px;
+    right: -20px;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25);
     z-index: 100;
     

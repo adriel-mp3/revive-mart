@@ -1,8 +1,16 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import styled, { keyframes } from 'styled-components'
 
-// ver uma forma de aproveitar os estilos repetidos
-
+export const showLeft = keyframes`
+  
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
@@ -24,28 +32,10 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   flex: 1;
+  position: relative;
 
   @media (max-width:1024px) {
     flex: initial;
-  }
-`;
-
-export const NavList = styled.nav`
-  display: flex;
-  gap: 48px;
-
-  @media (max-width:1024px) {
-    display: none;
-  }
-`;
-
-export const NavItem = styled(NavLink)`
-  display: flex;
-  color: ${({ theme }) => theme.colors.gray50};
-  font-size: ${({ theme }) => theme.fontSizes.base};
-  
-  &.active {
-    color: ${({ theme }) => theme.colors.black};
   }
 `;
 
@@ -54,15 +44,16 @@ export const CartButton = styled.button`
 `;
 
 export const MobileButton = styled.button`
-
   display: none;
   @media (max-width:1024px) {
     display:block;
+    z-index: 110;
   }
 `
 
 export const MenuButtons = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   gap: 30px;
 `
