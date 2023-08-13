@@ -6,7 +6,7 @@ import {
   Logo,
   NavContainer,
   MobileButton,
-  MenuButtons,
+  NavButtons,
 } from "./style";
 
 import logo from "../../assets/logo.svg";
@@ -26,7 +26,7 @@ const Header = () => {
       <Logo src={logo} alt="Revive Mart" />
       <NavContainer>
         <NavLinks $isOpen={menuMobile} />
-        <MenuButtons>
+        <NavButtons>
           <CartButton onClick={setMenuCart}>
             <img src={cart} alt="Cart icon" />
           </CartButton>
@@ -34,7 +34,7 @@ const Header = () => {
           <MobileButton onClick={setMenuMobile}>
             <img src={menuMobile ? menuClose : menuOpen} alt="Menu open icon" />
           </MobileButton>
-        </MenuButtons>
+        </NavButtons>
       </NavContainer>
     </HeaderContainer>
   );

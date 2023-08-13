@@ -51,7 +51,7 @@ export const MobileButton = styled.button`
   }
 `
 
-export const MenuButtons = styled.div`
+export const NavButtons = styled.div`
   display: flex;
   position: relative;
   align-items: center;
