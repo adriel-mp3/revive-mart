@@ -1,17 +1,20 @@
 import React from 'react'
 import { CartContainer, ProductLabel, ProductQuantity, ProductContainer, ProductPrice, CartInfo, MainTitle, LabelWrapper, LabelText, LabelTitle, ProductTotal, CartSummary, OrderList, ButtonWrapper } from './style';
-import arrow from '../../assets/arrow-quantity.svg';
 import UserContext from '../../context/UserContext';
 import cart from '../../assets/cart-white.svg';
+import QuantityControlButton from '../../components/Button/QuantityControlButton';
+import { calculateItemByQuantity, calculateItemsQuantity, calculateTotalPrice } from '../../utils/calculationsCart';
 
 const Cart = () => {
   const { cartData } = React.useContext(UserContext);
-
+  const totalCartValue = calculateTotalPrice(cartData);
+  const totalCartItems = calculateItemsQuantity(cartData);
+  
   return (
     <CartContainer>
       <CartInfo>
         <MainTitle>
-          <h1>Cart <span>{cartData.length} items</span></h1>
+          <h1>Cart <span>{totalCartItems} items</span></h1>
         </MainTitle>
         {cartData && cartData.map((item, index) =>
           <ProductContainer key={item.id}>
@@ -27,15 +30,9 @@ const Cart = () => {
             </ProductLabel>
             <ProductQuantity>
               {index === 0 && <LabelTitle>quantity</LabelTitle>}
-              <div>
-                <button>
-                  <img src={arrow} alt="Quantity decrement button" />
-                </button>
-                <p>{item.quantity}</p>
-                <button>
-                  <img src={arrow} alt="Quantity increment button" />
-                </button>
-              </div>
+              <QuantityControlButton itemId={item.id}>
+                {item.quantity}
+              </QuantityControlButton>
             </ProductQuantity>
             <ProductPrice>
               {index === 0 && <LabelTitle>price</LabelTitle>}
@@ -46,7 +43,7 @@ const Cart = () => {
             <ProductTotal>
               {index === 0 && <LabelTitle>total</LabelTitle>}
               <div>
-                <p>$ {(item.price * item.quantity).toFixed(2)}</p>
+                <p>$ {calculateItemByQuantity(item.quantity, item.price)}</p>
               </div>
             </ProductTotal>
           </ProductContainer>)}
@@ -54,14 +51,14 @@ const Cart = () => {
       <CartSummary>
         <h2>Order summary</h2>
         <OrderList>
-          <li>Products <span>$500</span></li>
+          <li>Products <span>$ {totalCartValue}</span></li>
           <li>Shipping <span>FREE</span></li>
         </OrderList>
         <form>
           <label htmlFor="promo">Promo code</label>
           <input type="text" name="" id="promo" placeholder='Enter your code' />
         </form>
-        <p>Total: <span>$500</span></p>
+        <p>Total: <span>$ {totalCartValue}</span></p>
         <ButtonWrapper>
           <button>Proceed to Payment <img src={cart} alt="Cart icon" /></button>
         </ButtonWrapper>
