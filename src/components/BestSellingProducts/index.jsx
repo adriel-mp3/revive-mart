@@ -17,7 +17,7 @@ const BestSellingProducts = () => {
         <p>Our collection of Best Selling products in our pre-owned store</p>
         <PrimaryButton color='black'>See more</PrimaryButton>
       </SideInfo>
-      {loading && <Spinner/>}
+      {loading && <Spinner />}
       <CardsWrapper>
         {data && data.map((product) =>
           <Link to='men' key={product.id}>
