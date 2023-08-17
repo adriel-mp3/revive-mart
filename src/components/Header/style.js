@@ -26,6 +26,10 @@ export const HeaderContainer = styled.header`
 
 export const Logo = styled.img`
   margin-right: 80px;
+
+  @media (max-width:768px) {
+    margin-right: 40px;
+  }
 `;
 
 export const NavContainer = styled.nav`

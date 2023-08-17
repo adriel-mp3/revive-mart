@@ -5,7 +5,7 @@ import QuantityControlButton from '../../Button/QuantityControlButton';
 import { calculateItemByQuantity } from '../../../utils/calculationsCart';
 
 const CartDropdown = ({ $isOpen }) => {
-  const { cartData } = React.useContext(UserContext);
+  const { cartData, removeItemFromCart } = React.useContext(UserContext);
 
   if (cartData.length)
     return (
@@ -13,7 +13,7 @@ const CartDropdown = ({ $isOpen }) => {
         <ul>
           {cartData.map((itemCart) =>
             <CartItem key={itemCart.id}>
-              <span>{itemCart.category} <button>remove</button></span>
+              <span>{itemCart.category} <button onClick={() => removeItemFromCart(itemCart.id)}>remove</button></span>
               <CartTitle>
                 <p><strong>{itemCart.quantity} x</strong> {itemCart.title}</p>
                 <span>$ {calculateItemByQuantity(itemCart.quantity, itemCart.price)}</span>
