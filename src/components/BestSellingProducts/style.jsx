@@ -11,6 +11,7 @@ export const ProductsContainer = styled.section`
   margin-bottom: 8rem;
 
   @media (max-width:1024px) {
+    margin-bottom: 6rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -49,6 +50,10 @@ export const SideInfo = styled.div`
   }
 
   @media (max-width:1024px) {
+
+    &::after {
+      display: none;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +61,18 @@ export const SideInfo = styled.div`
     
     p, h2 {
       margin-bottom: 0rem;
+    }
+  }
+
+  @media (max-width:768px) {
+    flex-wrap: wrap;
+    h2 {
+      font-size: ${({ theme }) => theme.fontSizes.medium};
+      line-height: 2rem;
+    }
+
+    p {
+      font-size: ${({ theme }) => theme.fontSizes.extraSmall};
     }
   }
 `
@@ -69,6 +86,10 @@ export const CardsWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:40px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 `
 
