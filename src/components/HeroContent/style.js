@@ -12,6 +12,9 @@ export const HeroContainer = styled.section`
   overflow: hidden;
 
   @media (max-width:1024px) {
+    grid-template-columns: 1fr;
+    margin:0 1.25rem 4rem 1.25rem;
+    gap:0px;
     display: block;
     padding: 60px 0;
   }
@@ -20,23 +23,30 @@ export const HeroContainer = styled.section`
 export const HeroBackground = styled.main`
   margin: 0 auto;
   max-width: 1600px;
-  @media (max-width:1024px) {
-  }
+
 `
 
 export const SideInfo = styled.div`
   padding-left: 2.81rem;
   margin-left: 20px;
-h1 {
-  color: ${({ theme }) => theme.colors.black};
-  font-weight: 800;
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  line-height: 4rem;
-  margin-bottom: 1.5rem;
-}
+  h1 {
+    color: ${({ theme }) => theme.colors.black};
+    font-weight: 800;
+    font-size: ${({ theme }) => theme.fontSizes.xl};
+    line-height: 4rem;
+    margin-bottom: 1.5rem;
+  }
 
 @media (max-width:1024px) {
+  padding-left: 1rem;
   margin-left: 0px;
+}
+
+@media (max-width:768px) {
+  h1 {
+    font-size:2.2rem;
+    line-height: 3rem;
+  }
 }
 `;
 

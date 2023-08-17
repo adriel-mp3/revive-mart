@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom';
+import trash from '../../../assets/trash-cart.svg';
 
 const showLeft = keyframes`
   
@@ -24,6 +25,9 @@ export const CartInfo = styled.div`
   border-radius:7px;
   left: -280px;
   top: 40px;
+  max-height: 400px;
+  overflow-y: scroll;
+  z-index: 1000;
 `;
 
 
@@ -33,6 +37,10 @@ export const CartLink = styled(Link)`
   text-align: center;
   text-transform: uppercase;
   align-items: center;
+  font-weight: ${({ theme }) => theme.fontWeights.extraBold};
+  margin-top: 10px;
+  border-top: 1px solid ${({ theme }) => theme.colors.gray20};
+  padding-top: 10px;
 
   &::after {
     content: '';
@@ -42,3 +50,71 @@ export const CartLink = styled(Link)`
     background: ${({ theme }) => theme.colors.black90};
   }
 `;
+
+export const CartItem = styled.li`
+  padding-bottom: 10px;
+
+  & + & {
+    padding-top:10px;
+    border-top: 1px solid ${({ theme }) => theme.colors.gray20};
+  }
+  & > span { 
+    color:${({ theme }) => theme.colors.gray40};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: ${({ theme }) => theme.fontSizes.extraSmall};
+    
+    button {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color:${({ theme }) => theme.colors.gray40};
+      padding: 4px;
+      cursor: pointer;
+    }
+
+    button::after {
+      content: '';
+      display: block;
+      background: url(${trash});
+      width: 9px;
+      height: 11px;
+    }
+  }
+`
+
+export const CartTitle = styled.div`
+  display: flex;
+  justify-content:space-between;
+  margin-right: 4px;
+
+  p {
+    font-weight: ${({ theme }) => theme.fontWeights.medium};
+    max-width: 15ch;
+    line-height: 1.2rem;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+
+  span {
+    font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+  }
+`
+
+export const CartQuantity = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    cursor: pointer;
+  }
+  
+  & button:last-child {
+    rotate: 180deg;
+  }
+`

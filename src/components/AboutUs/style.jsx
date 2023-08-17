@@ -38,10 +38,15 @@ export const AboutContainer = styled.section`
   }
 
   @media (max-width:1024px) {
+    margin-bottom: 5rem;
+    h2 {
+      &::before {
+        display: none;
+      }
+    }
     p {
       margin-bottom: 2rem;
     }
-    margin-bottom: 5rem;
   }
 `
 

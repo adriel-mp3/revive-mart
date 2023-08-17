@@ -1,15 +1,17 @@
 import React from "react";
-import HeroContent from "../../components/HeroContent/HeroContent";
-import BestSellingProducts from "../../components/BestSellingProducts/BestSellingProducts";
-import AboutUs from "../../components/AboutUs/AboutUs";
+import HeroContent from "../../components/HeroContent";
+import BestSellingProducts from "../../components/BestSellingProducts";
+import AboutUs from "../../components/AboutUs";
+import Categories from "../../components/Categories";
 
 const Home = () => {
   return (
-    <main style={{ maxWidth: "1600px", margin: "0 auto", padding:'0 20px' }}>
+    <>
       <HeroContent />
       <BestSellingProducts/>
       <AboutUs/>
-    </main>
+      <Categories/>
+    </>
   );
 };
 

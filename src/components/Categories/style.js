@@ -9,9 +9,10 @@ export const BackgroundWrapper = styled.div`
   padding: 0 1.25rem 5rem 1.25rem;
 `
 export const CategoriesContainer = styled.section`
-  margin-bottom: 6rem;
+  margin-bottom: 12rem;
 `
 export const CategoriesTitle = styled.h2`
+  font-size:${({theme}) => theme.fontSizes.lg};
   text-align: center;
 `
 export const CategoriesText = styled.p`
@@ -56,7 +57,7 @@ export const CardTitle = styled.h3`
   margin-top: .75rem;
   color:${({ theme }) => theme.colors.gray60};
   font-weight: 700;
-  font-size: var(--base);
+  font-size:${({theme}) => theme.fontSizes.medium};
   margin-bottom: .75rem;
 `
 
