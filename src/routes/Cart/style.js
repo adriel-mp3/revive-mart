@@ -8,6 +8,11 @@ export const CartContainer = styled.main`
   margin: 0 auto 180px auto;
   padding: 0 20px;
   gap:60px;
+
+  @media (max-width:1024px) {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
 `
 
 export const CartInfo = styled.div`
