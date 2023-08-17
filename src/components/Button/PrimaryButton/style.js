@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import arrow from "./../../assets/arrow-button.svg";
-import arrowBlack from "./../../assets/arrow-black.svg";
+import arrow from "./../../../assets/arrow-button.svg";
+import arrowBlack from "./../../../assets/arrow-black.svg";
 
 export const Button = styled.button`
   display: flex;
