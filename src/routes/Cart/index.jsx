@@ -3,7 +3,7 @@ import { CartContainer, ProductLabel, ProductQuantity, ProductContainer, Product
 import UserContext from '../../context/UserContext';
 import cart from '../../assets/cart-white.svg';
 import QuantityControlButton from '../../components/Button/QuantityControlButton';
-import { calculateItemByQuantity, calculateItemsQuantity, calculateTotalPrice } from '../../utils/calculationsCart';
+import { calculateItemByQuantity, calculateItemsQuantity, calculateTotalPrice } from '../../utils/cartCalculations';
 
 const Cart = () => {
   const { cartData } = React.useContext(UserContext);
