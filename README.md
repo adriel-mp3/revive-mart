@@ -13,6 +13,7 @@ I chose to consume the <a href="https://fakestoreapi.com/">Fake Store API</a> to
 <div align="center">
   <img align="center" src="./.github/categories.png">
 </div>
+
 ### Filter Products
 If the user wants a customized product view based on the available filters, they can filter by: Lowest price, Highest price, Name (A - Z), or Rating (Stars).
 
@@ -33,6 +34,7 @@ If the user wants to see the status of their cart, they will have a small visual
 <div align="center">
   <img align="center" src="./.github/cart.png">
 </div>
+
 ### Cart Resume
 There is a cart summary page where the user can access and view more information about the products in the cart and proceed to checkout.
 
