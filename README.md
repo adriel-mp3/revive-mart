@@ -1,6 +1,7 @@
 # Revive Mart
 
 Revive Mart is an e-commerce platform built with React.js & Styled Components.
+If you'd like to visit the project, please click on the following <a href="https://revive-mart.vercel.app/">link</a>
 
 <div align="center">
   <img align="center" src="./.github/screenshot.png">
