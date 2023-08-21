@@ -2,7 +2,7 @@ import React from 'react'
 import UserContext from "../../../context/UserContext";
 import { CartInfo, CartLink, CartItem, CartTitle, CartQuantity } from './style';
 import QuantityControlButton from '../../Button/QuantityControlButton';
-import { calculateItemByQuantity } from '../../../utils/calculationsCart';
+import { calculateItemByQuantity } from '../../../utils/cartCalculations';
 
 const CartDropdown = ({ $isOpen }) => {
   const { cartData, removeItemFromCart } = React.useContext(UserContext);

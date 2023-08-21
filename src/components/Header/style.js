@@ -44,7 +44,24 @@ export const NavContainer = styled.nav`
 `;
 
 export const CartButton = styled.button`
-
+    position: relative;
+    
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -5px;
+      left: 15px;
+      content: '1';
+      width: 18px;
+      height: 18px;
+      background: #DC2626;
+      border-radius: 50%;
+      font-family: 'Poppins';
+      color: ${({theme}) => theme.colors.white};
+      font-size: ${({theme}) => theme.fontSizes.extraSmall};
+  }
 `;
 
 export const MobileButton = styled.button`
