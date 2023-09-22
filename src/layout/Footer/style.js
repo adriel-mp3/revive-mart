@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FooterBackground = styled.div`
+export const Background = styled.div`
   background: ${({ theme }) => theme.colors.base};
 
   footer {
@@ -13,7 +13,7 @@ export const FooterBackground = styled.div`
     color: ${({ theme }) => theme.colors.gray70};
   }
 `
-export const FooterContent = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   margin-bottom: 5.25rem;
@@ -27,7 +27,7 @@ export const Logo = styled.img`
   margin-bottom: 1.5rem;
 `
 
-export const FooterNetworking = styled.div`
+export const Social = styled.div`
   p {
     color: ${({ theme }) => theme.colors.gray70};
     max-width: 20ch;
@@ -56,7 +56,7 @@ export const FooterNetworking = styled.div`
   }
 `
 
-export const FooterNav = styled.nav`
+export const NavList = styled.nav`
   display: flex;
   gap:3rem;
   
