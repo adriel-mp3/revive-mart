@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 
-export const BackgroundWrapper = styled.div`
+export const Container = styled.section`
+  margin-bottom: 12rem;
+
+  h2 {
+    font-size:${({ theme }) => theme.fontSizes.lg};
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+`
+export const Background = styled.div`
   background: ${({ theme }) => theme.colors.base};
   position: relative;
   display: flex;
@@ -8,18 +21,8 @@ export const BackgroundWrapper = styled.div`
   align-items: center;
   padding: 0 1.25rem 5rem 1.25rem;
 `
-export const CategoriesContainer = styled.section`
-  margin-bottom: 12rem;
-`
-export const CategoriesTitle = styled.h2`
-  font-size:${({theme}) => theme.fontSizes.lg};
-  text-align: center;
-`
-export const CategoriesText = styled.p`
-  text-align: center;
-  margin-bottom: 6rem;
-`
-export const CategoriesCards = styled.ul`
+
+export const Cards = styled.ul`
   width: 100%;
   max-width: 1600px;
   justify-content: space-between;
@@ -32,8 +35,8 @@ export const CategoriesCards = styled.ul`
     align-items: center;
 }
 `
-export const CategorieCard = styled.li`
-
+export const Card = styled.li`
+  
   &:first-child {
     padding-top: 5rem;
   }
@@ -50,22 +53,22 @@ export const CategorieCard = styled.li`
   &:nth-child(even) {
     margin-top: 3rem;
   }
-`
 
-export const CardTitle = styled.h3`
-  text-align: center;
-  margin-top: .75rem;
-  color:${({ theme }) => theme.colors.gray60};
-  font-weight: 700;
-  font-size:${({theme}) => theme.fontSizes.medium};
-  margin-bottom: .75rem;
-`
+  h3 {
+    text-align: center;
+    margin-top: .75rem;
+    color:${({ theme }) => theme.colors.gray60};
+    font-weight: 700;
+    font-size:${({ theme }) => theme.fontSizes.medium};
+    margin-bottom: .75rem;
+  }
 
-export const CardText = styled.p`
-  color: ${({ theme }) => theme.colors.gray50};
-  font-size: ${({ theme }) => theme.fontSizes.base};
-  margin: 0 auto;
-  max-width: 30ch;
-  text-align: center;
-  margin-bottom: 1.5rem;
+  p {
+    color: ${({ theme }) => theme.colors.gray50};
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    margin: 0 auto;
+    max-width: 30ch;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    }
 `

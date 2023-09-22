@@ -1,29 +1,29 @@
 import React from 'react'
-import {
-  BackgroundWrapper, CategoriesContainer, CategoriesTitle, CategoriesText, CategoriesCards, CategorieCard, CardTitle, CardText
-} from './style'
-import categoriesCardsData from '../../utils/categoriesCardsData';
+import * as S from './style'
+import categoriesData from '../../utils/categoriesData';
 import PrimaryButton from '../Button/PrimaryButton';
 
 const Categories = () => {
+  
   return (
-    <CategoriesContainer>
-      <CategoriesTitle>Categories</CategoriesTitle>
-      <CategoriesText>Find what you are looking for</CategoriesText>
-      <BackgroundWrapper>
-        <CategoriesCards>
-          {categoriesCardsData.map((card) =>
-            <CategorieCard key={card.title}>
-              <img src={card.imgSrc} alt={card.imgAlt} />
-              <CardTitle>{card.title}</CardTitle>
-              <CardText>{card.text}</CardText>
-            </CategorieCard>
+    <S.Container>
+      <h2>Categories</h2>
+      <p>Find what you are looking for</p>
+      <S.Background>
+        <S.Cards>
+          {categoriesData.map((data) =>
+            <S.Card key={data.title}>
+              <img src={data.imgSrc} alt={data.imgAlt} />
+              <h3>{data.title}</h3>
+              <p>{data.text}</p>
+            </S.Card>
           )}
-        </CategoriesCards>
+        </S.Cards>
         <PrimaryButton color={'white'}>Explore</PrimaryButton>
-      </BackgroundWrapper>
-    </CategoriesContainer>
+      </S.Background>
+    </S.Container>
   )
 }
 
 export default Categories
+
