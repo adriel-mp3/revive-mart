@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import arrow from '../../assets/custom-arrow.svg'
 
-export const ProductsContainer = styled.section`
+export const Container = styled.section`
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
@@ -18,7 +18,7 @@ export const ProductsContainer = styled.section`
   }
 `
 
-export const SideInfo = styled.div`
+export const Side = styled.div`
   position: relative;
   
   &::after {
@@ -77,7 +77,7 @@ export const SideInfo = styled.div`
   }
 `
 
-export const CardsWrapper = styled.div`
+export const Cards = styled.div`
   display: flex;
   overflow-x: auto;
   gap:80px;
@@ -93,7 +93,7 @@ export const CardsWrapper = styled.div`
   }
 `
 
-export const ProductCard = styled.div`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
