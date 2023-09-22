@@ -1,13 +1,13 @@
 import React from 'react'
-import { DefaultSpinnerContainer } from './style';
+import * as S from './style';
 
 const Spinner = () => {
   return (
-    <DefaultSpinnerContainer>
+    <S.DefaultSpinnerContainer>
     {[...Array(12)].map((_, index) => (
       <div key={index} />
     ))}
-  </DefaultSpinnerContainer>
+  </S.DefaultSpinnerContainer>
   );
 };
 
