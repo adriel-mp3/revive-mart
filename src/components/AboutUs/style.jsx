@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import arrow from '../../assets/custom-direct-arrow.svg'
 
-export const AboutContainer = styled.section`
+export const Container = styled.section`
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
@@ -50,7 +50,7 @@ export const AboutContainer = styled.section`
   }
 `
 
-export const AboutCards = styled.ul`
+export const Cards = styled.ul`
   display: flex;
   justify-content: space-between;
   
@@ -63,7 +63,7 @@ export const AboutCards = styled.ul`
   }
 `
 
-export const AboutCard = styled.li`
+export const Card = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +87,7 @@ export const CardText = styled.p`
   max-width: 35ch;
 `
 
-export const ImageWrapper = styled.div`
+export const ImgWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;

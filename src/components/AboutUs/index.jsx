@@ -1,24 +1,24 @@
 import React from 'react'
-import { AboutContainer, AboutCards, AboutCard, CardText, CardTitle, ImageWrapper } from './style'
+import * as S from './style'
 import aboutCardsData from '../../utils/aboutCardsData';
 
 const AboutUs = () => {
   return (
-    <AboutContainer>
+    <S.Container>
       <h2>About us</h2>
       <p>Embrace nature&apos;s allure with pre-loved finds. Order now!</p>
-      <AboutCards>
+      <S.Cards>
         {aboutCardsData.map((card) =>
-          <AboutCard key={card.title}>
-            <ImageWrapper>
+          <S.Card key={card.title}>
+            <S.ImgWrapper>
               <img src={card.imgSrc} alt={card.imgAlt} />
-            </ImageWrapper>
-            <CardTitle>{card.title}</CardTitle>
-            <CardText>{card.text}</CardText>
-          </AboutCard>
+            </S.ImgWrapper>
+            <S.CardTitle>{card.title}</S.CardTitle>
+            <S.CardText>{card.text}</S.CardText>
+          </S.Card>
         )}
-      </AboutCards>
-    </AboutContainer>
+      </S.Cards>
+    </S.Container>
   )
 }
 
