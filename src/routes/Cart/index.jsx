@@ -43,7 +43,7 @@ const Cart = () => {
             <ProductTotal>
               {index === 0 && <LabelTitle>total</LabelTitle>}
               <div>
-                <p>$ {calculateItemByQuantity(item.quantity, item.price)}</p>
+                <p>${calculateItemByQuantity(item.quantity, item.price)}</p>
               </div>
             </ProductTotal>
           </ProductContainer>)}
