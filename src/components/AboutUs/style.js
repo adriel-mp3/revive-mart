@@ -9,9 +9,9 @@ export const Container = styled.section`
 
   h2 {
     font-weight: 700;
-    font-size: ${({theme}) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes.lg};
     text-align: center;
-    color: ${({theme}) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.black};
     margin-bottom: .75rem;
     position: relative;
     display: flex;
@@ -32,8 +32,8 @@ export const Container = styled.section`
   p {
     text-align: center;
     font-weight: 500;
-    font-size: ${({theme}) => theme.fontSizes.base};
-    color: ${({theme}) => theme.colors.gray50};
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    color: ${({ theme }) => theme.colors.gray50};
     margin-bottom: 3rem;
   }
 
@@ -72,9 +72,9 @@ export const Card = styled.li`
 
 export const CardTitle = styled.h3`
   text-align: center;
-  font-size: ${({theme}) => theme.fontSizes.base};
+  font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 700;
-  color:${({theme}) => theme.colors.black90};
+  color:${({ theme }) => theme.colors.black90};
   margin-bottom: .75rem;
 `
 
@@ -82,8 +82,8 @@ export const CardTitle = styled.h3`
 export const CardText = styled.p`
   text-align: center;
   font-weight: 500;
-  font-size: ${({theme}) => theme.fontSizes.base};
-  color: ${({theme}) => theme.colors.gray50};
+  font-size: ${({ theme }) => theme.fontSizes.base};
+  color: ${({ theme }) => theme.colors.gray50};
   max-width: 35ch;
 `
 
@@ -95,6 +95,6 @@ export const ImgWrapper = styled.div`
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background:${({theme}) => theme.colors.base};
+  background:${({ theme }) => theme.colors.base};
   margin-bottom: 1.5rem;
 `
