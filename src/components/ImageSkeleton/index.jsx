@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Skeleton, Wrapper } from './style';
+import * as S from './style';
 
 export const ImageSkeleton = ({alt, ...props}) => {
   const [skeleton, setSkeleton] = React.useState(true);
@@ -10,10 +10,10 @@ export const ImageSkeleton = ({alt, ...props}) => {
   }
 
  return (
-    <Wrapper>
-      {skeleton && <Skeleton></Skeleton>}
-      <Image onLoad={handleLoad} alt={alt} {...props} />
-    </Wrapper>
+    <S.Wrapper>
+      {skeleton && <S.Skeleton></S.Skeleton>}
+      <S.Image onLoad={handleLoad} alt={alt} {...props} />
+    </S.Wrapper>
   );
 }
 

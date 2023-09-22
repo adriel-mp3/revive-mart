@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch';
 import { API_URL } from '../../api/api';
-import { BuyButton, CartButton, ProductContainer, Container, ProductSubtitle, ProductPrice, ButtonsContainer, ShippingPromo } from './style';
+import * as S from './style';
 import UserContext from '../../context/UserContext';
 import ImageSkeleton from '../ImageSkeleton';
 import Spinner from '../Spinner';
@@ -10,36 +10,36 @@ import Spinner from '../Spinner';
 const ProductInfo = () => {
   const params = useParams();
   const { data: productData, error, loading } = useFetch(`${API_URL}products/${params.id}`);
-  const { addItemToCart } = React.useContext(UserContext);
+  const { addProductToCart } = React.useContext(UserContext);
 
   return (
-    <Container>
+    <S.Container>
       {loading && <Spinner />}
       {productData &&
-        <ProductContainer>
+        <S.Product>
           <ImageSkeleton src={productData.image} alt={productData.category} />
           <div>
             <h1>{productData.title}</h1>
-            <ProductSubtitle>
+            <S.Subtitle>
               {productData.category}
               <span>{productData.rating['rate']}</span>
-            </ProductSubtitle>
+            </S.Subtitle>
             <span>Sold and delivered by: ReviveMart! | {productData.rating['count']} und in stock.</span>
-            <ProductPrice>
+            <S.Price>
               For only:
               <strong>${productData.price.toFixed(2)}</strong>
-            </ProductPrice>
-            <ButtonsContainer>
-              <BuyButton color='black'>Buy</BuyButton>
-              <CartButton color='black' onClick={() => addItemToCart(productData)}></CartButton>
-            </ButtonsContainer>
-            <ShippingPromo>Fast & Free Shipping</ShippingPromo>
+            </S.Price>
+            <S.Controls>
+              <S.BuyButton color='black'>Buy</S.BuyButton>
+              <S.CartButton color='black' onClick={() => addProductToCart(productData)}></S.CartButton>
+            </S.Controls>
+            <S.ShippingPromo>Fast & Free Shipping</S.ShippingPromo>
           </div>
-        </ProductContainer>
+        </S.Product>
       }
       {!loading && <h2>Product description</h2>}
       <p>{productData && productData.description}</p>
-    </Container>
+    </S.Container>
   )
 }
 

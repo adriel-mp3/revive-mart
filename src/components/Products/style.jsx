@@ -13,7 +13,27 @@ const showTop = keyframes`
   }
 `
 
-export const ProductsContainer = styled.ul`
+export const Container = styled.main`
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  h1 {
+    text-transform: capitalize;
+    font-size: ${({ theme }) => theme.fontSizes.xl};
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 10px;
+  }
+`
+
+export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   gap:80px;
@@ -21,7 +41,7 @@ export const ProductsContainer = styled.ul`
   margin-bottom: 160px;
 `
 
-export const ProductCard = styled.li`
+export const Product = styled.li`
   a {
     display: flex;
     flex-direction: column;
@@ -55,7 +75,7 @@ export const ProductCard = styled.li`
     color: ${({ theme }) => theme.colors.gray80};
   }
 `
-export const ProductLabel = styled.div`
+export const Label = styled.div`
   display: flex;
   align-items: start;
 
@@ -76,26 +96,6 @@ export const ProductLabel = styled.div`
     background: url(${star}) no-repeat;
   }
 `
-export const MainContainer = styled.main`
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  h1 {
-    text-transform: capitalize;
-    font-size: ${({ theme }) => theme.fontSizes.xl};
-  }
-
-  & > div {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 80px;
-    gap: 10px;
-  }
-`
-
 export const FilterButton = styled.button`
   display: flex;
   background: ${({ theme }) => theme.colors.black};

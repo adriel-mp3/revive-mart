@@ -23,7 +23,7 @@ export const Container = styled.main`
   }
 `
 
-export const ProductContainer = styled.div`
+export const Product = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin-bottom: 80px;
@@ -51,7 +51,7 @@ export const ProductContainer = styled.div`
   }
 `
 
-export const ProductSubtitle = styled.p`
+export const Subtitle = styled.p`
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #ccc;
@@ -75,7 +75,7 @@ export const ProductSubtitle = styled.p`
   }
 `
 
-export const ProductPrice = styled.p`
+export const Price = styled.p`
   display: flex;
   align-items: center;
   font-weight: 800;
@@ -88,7 +88,7 @@ export const ProductPrice = styled.p`
   }
 `
 
-export const ButtonsContainer = styled.div`
+export const Controls = styled.div`
   display: flex;
   gap: 20px;
   margin: 20px 0;
