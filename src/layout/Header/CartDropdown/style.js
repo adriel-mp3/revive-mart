@@ -14,7 +14,7 @@ const showLeft = keyframes`
   }
 `
 
-export const CartInfo = styled.div`
+export const CartList = styled.div`
   display: ${({ $isOpenCart }) => $isOpenCart ? 'block' : 'none'};
   animation: ${showLeft} .3s forwards;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25);
@@ -31,7 +31,7 @@ export const CartInfo = styled.div`
 `;
 
 
-export const CartLink = styled(Link)`
+export const ViewCart = styled(Link)`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -51,7 +51,7 @@ export const CartLink = styled(Link)`
   }
 `;
 
-export const CartItem = styled.li`
+export const Item = styled.li`
   padding-bottom: 10px;
 
   & + & {
@@ -84,7 +84,7 @@ export const CartItem = styled.li`
   }
 `
 
-export const CartTitle = styled.div`
+export const Label = styled.div`
   display: flex;
   justify-content:space-between;
   margin-right: 4px;
@@ -104,7 +104,7 @@ export const CartTitle = styled.div`
   }
 `
 
-export const CartQuantity = styled.div`
+export const Options = styled.div`
   flex: 1;
   display: flex;
   align-items: center;

@@ -1,14 +1,5 @@
 import React from "react";
-
-import {
-  CartButton,
-  HeaderContainer,
-  Logo,
-  NavContainer,
-  MobileButton,
-  NavButtons,
-} from "./style";
-
+import * as S from "./style";
 import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
 import menuOpen from '../../assets/menu-open.svg'
@@ -26,22 +17,22 @@ const Header = () => {
   const itemsInCart = calculateItemsQuantity(cartProducts);
 
   return (
-    <HeaderContainer>
-      <Logo src={logo} alt="Revive Mart" />
-      <NavContainer>
+    <S.Container>
+      <S.Logo src={logo} alt="Revive Mart" />
+      <S.Nav>
         <NavLinks $isOpen={menuMobile} />
-        <NavButtons>
-          <CartButton onClick={setMenuCart} >
+        <S.ButtonsWrapper>
+          <S.CartButton onClick={setMenuCart} >
             <img src={cart} alt="Cart icon" />
             <span>{itemsInCart}</span>
-          </CartButton>
+          </S.CartButton>
           <CartDropdown $isOpen={menuCart} />
-          <MobileButton onClick={setMenuMobile}>
+          <S.MobileButton onClick={setMenuMobile}>
             <img src={menuMobile ? menuClose : menuOpen} alt="Menu open icon" />
-          </MobileButton>
-        </NavButtons>
-      </NavContainer>
-    </HeaderContainer>
+          </S.MobileButton>
+        </S.ButtonsWrapper>
+      </S.Nav>
+    </S.Container>
   );
 };
 

@@ -11,7 +11,7 @@ export const showLeft = keyframes`
     transform: translateX(0);
   }
 `
-export const HeaderContainer = styled.header`
+export const Container = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
@@ -32,7 +32,7 @@ export const Logo = styled.img`
   }
 `;
 
-export const NavContainer = styled.nav`
+export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   flex: 1;
@@ -72,7 +72,7 @@ export const MobileButton = styled.button`
   }
 `
 
-export const NavButtons = styled.div`
+export const ButtonsWrapper = styled.div`
   display: flex;
   position: relative;
   align-items: center;
