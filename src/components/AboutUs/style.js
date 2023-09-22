@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import arrow from '../../assets/custom-direct-arrow.svg'
 
-export const AboutContainer = styled.section`
+export const Container = styled.section`
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
@@ -9,9 +9,9 @@ export const AboutContainer = styled.section`
 
   h2 {
     font-weight: 700;
-    font-size: ${({theme}) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes.lg};
     text-align: center;
-    color: ${({theme}) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.black};
     margin-bottom: .75rem;
     position: relative;
     display: flex;
@@ -32,8 +32,8 @@ export const AboutContainer = styled.section`
   p {
     text-align: center;
     font-weight: 500;
-    font-size: ${({theme}) => theme.fontSizes.base};
-    color: ${({theme}) => theme.colors.gray50};
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    color: ${({ theme }) => theme.colors.gray50};
     margin-bottom: 3rem;
   }
 
@@ -50,7 +50,7 @@ export const AboutContainer = styled.section`
   }
 `
 
-export const AboutCards = styled.ul`
+export const Cards = styled.ul`
   display: flex;
   justify-content: space-between;
   
@@ -63,7 +63,7 @@ export const AboutCards = styled.ul`
   }
 `
 
-export const AboutCard = styled.li`
+export const Card = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,9 +72,9 @@ export const AboutCard = styled.li`
 
 export const CardTitle = styled.h3`
   text-align: center;
-  font-size: ${({theme}) => theme.fontSizes.base};
+  font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 700;
-  color:${({theme}) => theme.colors.black90};
+  color:${({ theme }) => theme.colors.black90};
   margin-bottom: .75rem;
 `
 
@@ -82,12 +82,12 @@ export const CardTitle = styled.h3`
 export const CardText = styled.p`
   text-align: center;
   font-weight: 500;
-  font-size: ${({theme}) => theme.fontSizes.base};
-  color: ${({theme}) => theme.colors.gray50};
+  font-size: ${({ theme }) => theme.fontSizes.base};
+  color: ${({ theme }) => theme.colors.gray50};
   max-width: 35ch;
 `
 
-export const ImageWrapper = styled.div`
+export const ImgWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
@@ -95,6 +95,6 @@ export const ImageWrapper = styled.div`
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background:${({theme}) => theme.colors.base};
+  background:${({ theme }) => theme.colors.base};
   margin-bottom: 1.5rem;
 `
