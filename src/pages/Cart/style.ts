@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.main`
   display: grid;
@@ -7,21 +7,19 @@ export const Container = styled.main`
   max-width: 1600px;
   margin: 0 auto 180px auto;
   padding: 0 20px;
-  gap:60px;
+  gap: 60px;
 
-  @media (max-width:1024px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     align-items: start;
   }
-`
+`;
 
-export const Cart = styled.div`
-
-`
+export const Cart = styled.div``;
 
 export const MainTitle = styled.div`
   margin-bottom: 80px;
-  
+
   h1 {
     font-size: ${({ theme }) => theme.fontSizes.xl};
     display: flex;
@@ -33,39 +31,39 @@ export const MainTitle = styled.div`
   span {
     font-size: ${({ theme }) => theme.fontSizes.base};
     font-weight: 400;
-    color:${({ theme }) => theme.colors.gray40};
+    color: ${({ theme }) => theme.colors.gray40};
   }
-`
+`;
 export const ProductList = styled.div`
   display: flex;
   gap: 4rem;
   margin-bottom: 20px;
-  
+
   & + & {
-    border-top:1px solid ${({ theme }) => theme.colors.gray30};
+    border-top: 1px solid ${({ theme }) => theme.colors.gray30};
     padding-top: 20px;
   }
-`
+`;
 
 export const Label = styled.div`
   display: flex;
   flex-direction: column;
-  flex:1;
+  flex: 1;
 
   p {
     max-width: 20ch;
-    display: -webkit-box; 
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 1;
   }
-`
+`;
 
 export const LabelTitle = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.small};
-  color:${({ theme }) => theme.colors.gray40};
+  color: ${({ theme }) => theme.colors.gray40};
   margin-bottom: 20px;
-`
+`;
 
 export const LabelWrapper = styled.div`
   display: flex;
@@ -76,8 +74,8 @@ export const LabelWrapper = styled.div`
     max-height: 120px;
     object-fit: contain;
     margin-right: 20px;
-  }   
-`
+  }
+`;
 
 export const LabelText = styled.div`
   display: flex;
@@ -85,13 +83,13 @@ export const LabelText = styled.div`
 
   span {
     font-size: ${({ theme }) => theme.fontSizes.small};
-    color:${({ theme }) => theme.colors.gray70};
+    color: ${({ theme }) => theme.colors.gray70};
   }
 
   p {
-    font-weight:${({ theme }) => theme.fontWeights.semiBold};
+    font-weight: ${({ theme }) => theme.fontWeights.semiBold};
   }
-`
+`;
 
 export const ProductQuantity = styled.div`
   display: flex;
@@ -113,7 +111,7 @@ export const ProductQuantity = styled.div`
   & button:last-child {
     rotate: 180deg;
   }
-`
+`;
 export const ProductPrice = styled.div`
   display: flex;
   align-items: center;
@@ -127,16 +125,16 @@ export const ProductPrice = styled.div`
     flex: 1;
     align-items: center;
   }
-`
+`;
 
 export const ProductTotal = styled(ProductPrice)`
   align-items: flex-end;
-`
+`;
 
 export const CartSummary = styled.div`
   h2 {
     font-size: ${({ theme }) => theme.fontSizes.lg};
-    font-weight:  ${({ theme }) => theme.fontWeights.extraBold};
+    font-weight: ${({ theme }) => theme.fontWeights.extraBold};
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray30};
     padding-bottom: 5px;
     margin-bottom: 20px;
@@ -155,7 +153,7 @@ export const CartSummary = styled.div`
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray30};
-    
+
     label {
       display: block;
       font-size: ${({ theme }) => theme.fontSizes.medium};
@@ -165,10 +163,10 @@ export const CartSummary = styled.div`
     }
 
     input {
-      border:none;
+      border: none;
       border-radius: 7px;
       background: ${({ theme }) => theme.colors.gray20};
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       padding: 12px 19px;
     }
 
@@ -176,7 +174,7 @@ export const CartSummary = styled.div`
       color: ${({ theme }) => theme.colors.gray10};
     }
   }
-`
+`;
 
 export const OrderList = styled.ul`
   li {
@@ -196,7 +194,7 @@ export const OrderList = styled.ul`
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray30};
     margin-bottom: 20px;
   }
-`
+`;
 
 export const ButtonWrapper = styled.div`
   display: flex;
@@ -206,13 +204,12 @@ export const ButtonWrapper = styled.div`
     display: flex;
     gap: 14px;
     padding: 0.75rem 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     border-radius: 7px;
     align-items: center;
-    background: ${({theme}) => theme.colors.black};
-    color: ${({theme}) => theme.colors.white};
-    font-size: ${({theme}) => theme.fontSizes.base};
+    background: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.base};
     cursor: pointer;
   }
-
-`
+`;

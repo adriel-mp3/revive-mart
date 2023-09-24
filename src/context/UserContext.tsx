@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const UserContext = React.createContext();
+export const UserContext = React.createContext(null);
 
 export const UserStorage = ({ children }) => {
   const [cartProducts, setCartProducts] = React.useState([]);
