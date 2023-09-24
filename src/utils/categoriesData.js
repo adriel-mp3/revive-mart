@@ -2,7 +2,7 @@ import jewelry from '../assets/jewelry.jpg'
 import women from '../assets/women-clothing.jpg'
 import mens from '../assets/mens-clothing.jpg'
 
-const categoriesCardData = [
+const categoriesData = [
   {
     imgSrc: jewelry,
     imgAlt: 'A women using a necklace',
@@ -22,4 +22,4 @@ const categoriesCardData = [
     text: ''
   }
 ];
-export default categoriesCardData;
+export default categoriesData;

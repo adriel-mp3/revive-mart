@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CartContainer = styled.main`
+export const Container = styled.main`
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
@@ -15,7 +15,7 @@ export const CartContainer = styled.main`
   }
 `
 
-export const CartInfo = styled.div`
+export const Cart = styled.div`
 
 `
 
@@ -36,7 +36,7 @@ export const MainTitle = styled.div`
     color:${({ theme }) => theme.colors.gray40};
   }
 `
-export const ProductContainer = styled.div`
+export const ProductList = styled.div`
   display: flex;
   gap: 4rem;
   margin-bottom: 20px;
@@ -47,7 +47,7 @@ export const ProductContainer = styled.div`
   }
 `
 
-export const ProductLabel = styled.div`
+export const Label = styled.div`
   display: flex;
   flex-direction: column;
   flex:1;

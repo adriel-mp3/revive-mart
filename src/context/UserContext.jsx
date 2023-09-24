@@ -3,39 +3,39 @@ import React from 'react'
 export const UserContext = React.createContext();
 
 export const UserStorage = ({ children }) => {
-  const [cartData, setCartData] = React.useState([]);
+  const [cartProducts, setCartProducts] = React.useState([]);
 
-  const handleIncrement = (itemId) => {
-    const updatedCartItems = cartData.map(item => {
-      if (item.id === itemId) {
-        return {...item, quantity: item.quantity + 1};  
+  const handleIncrement = (product) => {
+    const updatedProducts = cartProducts.map(cartProduct => {
+      if (cartProduct.id === product.id) {
+        return { ...cartProduct, quantity: cartProduct.quantity + 1 };
       }
-      return item
+      return product
     })
 
-    setCartData(updatedCartItems);
+    setCartProducts(updatedProducts);
   }
 
-  const handleDecrement = (itemId) => {
-    const updatedCartItems = cartData.map(item => {
-      if (item.id === itemId && item.quantity > 1) {
-        return {...item, quantity: item.quantity - 1};  
+  const handleDecrement = (product) => {
+    const updatedCart = cartProducts.map(cartProduct => {
+      if (cartProduct.id === product.id && cartProduct.quantity > 1) {
+        return { ...cartProduct, quantity: cartProduct.quantity - 1 };
       }
-      return item
+      return cartProduct
     })
 
-    setCartData(updatedCartItems);
+    setCartProducts(updatedCart);
   }
 
-  function addItemToCart(product) {
-    const existingProduct = cartData.find((item) => item.id === product.id);
-    
+  const addProductToCart = (product) => {
+    const existingProduct = isExistingProduct(product);
+
     if (existingProduct) {
-      return setCartData((cartData) => cartData.map((item) =>
-        item.id === existingProduct.id ? { ...item, quantity: item.quantity + 1 } : item))
+      return setCartProducts((cartProducts) => cartProducts.map((cartProduct) =>
+        existingProduct?.id ? { ...cartProduct, quantity: cartProduct.quantity++ } : cartProduct))
     }
-    
-    setCartData((cartData) => [...cartData, {
+
+    setCartProducts((cartProducts) => [...cartProducts, {
       id: product.id,
       title: product.title,
       price: product.price,
@@ -45,13 +45,18 @@ export const UserStorage = ({ children }) => {
     }])
   }
 
-  const removeItemFromCart = (itemId) => {
-    const updatedCartItems = cartData.filter(item => item.id !== itemId);
-    setCartData(updatedCartItems);
+  const isExistingProduct = (product) => {
+    const existingProduct = cartProducts.find((cartProduct) => cartProduct.id === product.id)
+    return existingProduct || null;
+  }
+
+  const removeProductCart = (product) => {
+    const updatedCartItems = cartProducts.filter(item => item.id !== product.id);
+    setCartProducts(updatedCartItems);
   };
 
   return (
-    <UserContext.Provider value={{ cartData, setCartData, handleIncrement, handleDecrement, addItemToCart, removeItemFromCart}}>
+    <UserContext.Provider value={{ cartProducts, setCartProducts, handleIncrement, handleDecrement, addProductToCart, removeProductCart }}>
       {children}
     </UserContext.Provider>
   )
