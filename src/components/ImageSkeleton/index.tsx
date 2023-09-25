@@ -1,20 +1,27 @@
-import React from 'react'
-import * as S from './style';
+import React from "react";
+import * as S from "./style";
 
-export const ImageSkeleton = ({alt, ...props}) => {
+type ImageSkeletonProps = {
+  alt: string;
+  src: string;
+};
+
+export const ImageSkeleton = ({ alt, src, ...props }: ImageSkeletonProps) => {
   const [skeleton, setSkeleton] = React.useState(true);
-  
-  function handleLoad({ target }) {
-    setSkeleton(false)
-    target.style.opacity = 1;
+
+  function handleLoad({ target }: React.SyntheticEvent) {
+    setSkeleton(false);
+    if (target instanceof HTMLImageElement) {
+      target.style.opacity = "1";
+    }
   }
 
- return (
+  return (
     <S.Wrapper>
       {skeleton && <S.Skeleton></S.Skeleton>}
-      <S.Image onLoad={handleLoad} alt={alt} {...props} />
+      <S.Image onLoad={handleLoad} alt={alt} src={src} {...props} />
     </S.Wrapper>
   );
-}
+};
 
-export default ImageSkeleton
+export default ImageSkeleton;
