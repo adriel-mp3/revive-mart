@@ -1,8 +1,27 @@
 import React from "react";
 import Button from "./style";
 
-const PrimaryButton = ({ onClick, children, color }) => {
-  return <Button onClick={onClick} color={color}>{children}</Button>;
+export type PrimaryButtonTypes = {
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  label?: string;
+  variant: "dark" | "light";
+  icon?: string;
+  iconAlt?: string;
+};
+
+const PrimaryButton = ({
+  onClick,
+  label,
+  variant,
+  icon,
+  iconAlt,
+}: PrimaryButtonTypes) => {
+  return (
+    <Button onClick={onClick} variant={variant}>
+      {label}
+      <img src={icon} alt={iconAlt} />
+    </Button> 
+  );
 };
 
 export default PrimaryButton;
