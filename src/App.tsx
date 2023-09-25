@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Jewelery from "./pages/Jewelery/Jewelery";
-import Woman from "./pages/Woman/Woman";
-import Men from "./pages/Men/Men";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer/index";
+import Home from "@/pages/Home/Home";
+import Jewelery from "@/pages/Jewelery/Jewelery";
+import Woman from "@/pages/Woman/Woman";
+import Men from "@/pages/Men/Men";
+import Header from "@/layout/Header";
+import Footer from "@/layout/Footer/index";
 import styled from 'styled-components';
-import ProductInfo from "./components/ProductInfo";
-import Cart from "./pages/Cart";
+import ProductInfo from "@/components/ProductInfo";
+import Cart from "@/pages/Cart";
 
 const MainContainer = styled.div`
   display: flex;

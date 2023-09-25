@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import arrow from "./../../../assets/arrow-button.svg";
-import arrowBlack from "./../../../assets/arrow-black.svg";
-import { theme } from "../../../styles/Theme";
+import arrow from "@/assets/arrow-button.svg";
+import arrowBlack from "@/assets/arrow-black.svg";
+import { theme } from "@/styles/Theme";
 import { PrimaryButtonTypes } from "./index";
 
 const buttonStyles = {

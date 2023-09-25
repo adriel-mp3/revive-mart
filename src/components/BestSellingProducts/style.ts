@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import arrow from '../../assets/custom-arrow.svg'
+import arrow from '@/assets/custom-arrow.svg'
 
 export const Container = styled.section`
   max-width: 1600px;

@@ -1,7 +1,8 @@
-import React from 'react'
-import * as S from './style'
-import categoriesData from '../../utils/categoriesData';
-import PrimaryButton from '../Button/PrimaryButton';
+import React from "react";
+import * as S from "./style";
+import categoriesData from "@/utils/categoriesData";
+import PrimaryButton from "@/components/Button/PrimaryButton";
+import arrow from "@/assets/arrow-black.svg";
 
 const Categories = () => {
   

@@ -1,7 +1,8 @@
 import React from "react";
 import * as S from "./style";
-import PrimaryButton from "../Button/PrimaryButton";
-import arrow from "../../assets/arrow-button.svg";
+import PrimaryButton from "@/components/Button/PrimaryButton";
+import arrow from "@/assets/arrow-button.svg";
+
 const Hero = () => {
   return (
     <S.Background>
