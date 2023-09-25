@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
 import PrimaryButton from "../Button/PrimaryButton";
-
+import arrow from "../../assets/arrow-button.svg";
 const Hero = () => {
   return (
     <S.Background>
@@ -18,7 +18,7 @@ const Hero = () => {
               <span>Costumers</span>
             </S.Label>
           </S.Description>
-          <PrimaryButton color='black'>See More</PrimaryButton>
+          <PrimaryButton label="See More" variant="dark" icon={arrow} />
         </S.Side>
         <S.HeroImg></S.HeroImg>
       </S.Container>
