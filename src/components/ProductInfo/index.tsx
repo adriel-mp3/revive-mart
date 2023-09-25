@@ -1,12 +1,13 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch';
-import { API_URL } from '../../api/api';
-import * as S from './style';
-import UserContext from '../../context/UserContext';
-import ImageSkeleton from '../ImageSkeleton';
-import Spinner from '../Spinner';
-
+import React from "react";
+import { useParams } from "react-router-dom";
+import useFetch from "@/hooks/useFetch";
+import { API_URL } from "@/api/api";
+import * as S from "./style";
+import UserContext from "@/context/UserContext";
+import ImageSkeleton from "@/components/ImageSkeleton";
+import Spinner from "@/components/Spinner";
+import PrimaryButton from "@/components/Button/PrimaryButton";
+import cart from "@/assets/cart-white.svg";
 const ProductInfo = () => {
   const params = useParams();
   const { data: productData, error, loading } = useFetch(`${API_URL}products/${params.id}`);

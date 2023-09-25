@@ -19,7 +19,7 @@ const PrimaryButton = ({
   return (
     <Button onClick={onClick} variant={variant}>
       {label}
-      <img src={icon} alt={iconAlt} />
+      {icon && <img src={icon} alt={iconAlt} />}
     </Button> 
   );
 };

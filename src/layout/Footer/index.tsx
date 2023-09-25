@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../../assets/logo.svg'
-import twitter from '../../assets/twitter.svg'
-import instagram from '../../assets/instagram.svg'
-import facebook from '../../assets/facebook.svg'
+import logo from '@/assets/logo.svg'
+import twitter from '@/assets/twitter.svg'
+import instagram from '@/assets/instagram.svg'
+import facebook from '@/assets/facebook.svg'
 import * as S from './style'
 
 const Footer = () => {

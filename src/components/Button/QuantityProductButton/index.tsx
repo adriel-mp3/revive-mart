@@ -1,7 +1,7 @@
 import React from 'react'
 import { ButtonWrapper } from './style';
-import arrow from '../../../assets/arrow-quantity.svg'
-import UserContext from '../../../context/UserContext';
+import arrow from '@/assets/arrow-quantity.svg'
+import UserContext from '@/context/UserContext';
 
 const QuantityProductButton = ({ children: quantity, product }) => {
   const { handleIncrement, handleDecrement } = React.useContext(UserContext);

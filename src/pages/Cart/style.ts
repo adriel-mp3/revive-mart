@@ -158,7 +158,7 @@ export const CartSummary = styled.div`
       display: block;
       font-size: ${({ theme }) => theme.fontSizes.medium};
       font-weight: ${({ theme }) => theme.fontWeights.medium};
-      color: ${({ theme }) => theme.colors.gray90};
+      color: ${({ theme }) => theme.colors.gray80};
       margin-bottom: 10px;
     }
 
@@ -182,7 +182,7 @@ export const OrderList = styled.ul`
     justify-content: space-between;
     font-weight: ${({ theme }) => theme.fontWeights.medium};
     font-size: ${({ theme }) => theme.fontSizes.medium};
-    color: ${({ theme }) => theme.colors.gray90};
+    color: ${({ theme }) => theme.colors.gray80};
   }
 
   li + li {
@@ -209,7 +209,7 @@ export const ButtonWrapper = styled.div`
     align-items: center;
     background: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fontSizes.base};
+    font-size: ${({ theme: theme }) => theme.fontSizes.base};
     cursor: pointer;
   }
 `;

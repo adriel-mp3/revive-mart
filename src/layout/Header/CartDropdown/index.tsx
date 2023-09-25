@@ -1,8 +1,8 @@
 import React from 'react'
-import UserContext from "../../../context/UserContext";
+import UserContext from "@/context/UserContext";
 import * as S from './style';
-import QuantityProductButton from '../../../components/Button/QuantityProductButton';
-import { calculateItemByQuantity } from '../../../utils/cartCalculations';
+import QuantityProductButton from '@/components/Button/QuantityProductButton';
+import { calculateItemByQuantity } from '@/utils/cartCalculations';
 
 const CartDropdown = ({ $isOpen }) => {
   const { cartProducts, removeProductCart } = React.useContext(UserContext);
