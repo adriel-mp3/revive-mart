@@ -1,32 +1,35 @@
 import styled from "styled-components";
 import arrow from "./../../../assets/arrow-button.svg";
 import arrowBlack from "./../../../assets/arrow-black.svg";
+import { theme } from "../../../styles/Theme";
+import { PrimaryButtonTypes } from "./index";
 
-export const Button = styled.button`
+const buttonStyles = {
+  dark: {
+    backgroundColor: theme.colors.black,
+    color: theme.colors.white,
+    icon: arrow,
+  },
+  light: {
+    backgroundColor: theme.colors.white,
+    color: theme.colors.black,
+    icon: arrowBlack,
+  },
+};
+
+export const Button = styled.button<PrimaryButtonTypes>`
   display: flex;
   align-items: center;
   gap: 0.6rem;
   font-size: ${({ theme }) => theme.fontSizes.base};
-  font-family: 'Poppins';
-  background:${(props) => props.color};
+  font-family: "Poppins";
   border-radius: 7px;
-  border: none;
   padding: 0.75rem 1.5rem;
-  color: ${(props) => props.color === 'black' ? 'white' : 'black'};
-  cursor: pointer;
+  background: ${(props) => buttonStyles[props.variant]?.backgroundColor};
+  color: ${(props) => buttonStyles[props.variant]?.color};
 
-  &:after {
-    content: "";
-    display: block;
-    background-image: ${(props) => props.color === 'black' ? `url(${arrow})` : `url(${arrowBlack})`};
-    background-repeat:no-repeat;
-    width: 22px;
-    height: 13px;
-  }
-
-  @media (max-width:768px) {
-  font-size: ${({ theme }) => theme.fontSizes.small};
-
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSizes.small};
   }
 `;
 
