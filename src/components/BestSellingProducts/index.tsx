@@ -6,6 +6,7 @@ import useFetch from '../../hooks/useFetch';
 import { Link } from 'react-router-dom';
 import ImageSkeleton from '../ImageSkeleton';
 import Spinner from '../Spinner';
+import arrow from '../../assets/arrow-button.svg';
 
 const BestSellingProducts = () => {
   const { data, loading, error } = useFetch(`${API_URL}products?limit=4`);
@@ -15,7 +16,7 @@ const BestSellingProducts = () => {
       <S.Side>
         <h2>Best Selling Products</h2>
         <p>Our collection of Best Selling products in our pre-owned store</p>
-        <PrimaryButton color='black'>See more</PrimaryButton>
+        <PrimaryButton label="See More" variant="dark" icon={arrow} />
       </S.Side>
       {loading && <Spinner />}
       <S.Cards>
